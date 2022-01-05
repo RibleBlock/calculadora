@@ -8,31 +8,22 @@ const calculadora = {
     },
 
     verificaBtn() {
-        document.addEventListener('click', function(e) {
+        document.addEventListener('click', e => {
             const el = e.target;
 
-            if(el.classList.contains('btn-eq')) {
-                this.calcular();
-            }
-            
-            if(el.classList.contains('btn-num')) {
-                this.tela.value += el.innerText;
-            }
+            if(el.classList.contains('btn-eq')) this.calcular();
+                
+            if(el.classList.contains('btn-del')) this.btnDel();
+                
+            if(el.classList.contains('btn-clear')) this.clearTela();
 
-            if(el.classList.contains('btn-del')) {
-                this.btnDel();
-            }
-
-            if(el.classList.contains('btn-clear')) {
-                this.clearTela();
-            }
-        }.bind(this));
+            if(el.classList.contains('btn-num')) this.tela.value += el.innerText;
+            });
     },
 
     calcular() {
         let conta = this.tela.value;
 
-        
         try {
             conta = eval(conta);
 

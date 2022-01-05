@@ -8,7 +8,6 @@
     outline: 0;
 }
 
-
 body {
     display: grid;
     place-content: center;
@@ -31,38 +30,6 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-form input, form label, form button {
-    display: block;
-    width: 100%;
-    margin-bottom: 10px;
-    border-radius: 10px;
-}
-
-form input {
-    font-size: 24px;
-    height: 50px;
-    padding: 0 20px;
-}
-
-form input:focus {
-    outline: 2px solid var(--primary-color) ;
-}
-
-form button {
-    border: none;
-    background-color: var(--primary-color);
-    color: #fff;
-    font-size: 18px;
-    font-weight: 700;
-    cursor: pointer;
-    height: 50px;
-    margin-top: 25px;
-    border-radius: 10px;
-}
-
-form button:hover {
-    background-color: var(--primary-color-darker);
-}
 /**********************************/
 
 .calculadora {
@@ -75,6 +42,7 @@ form button:hover {
     text-align: right;
     font-size: 2em;
     border-color: #e9e9e9;
+    cursor: not-allowed;
 }
 
 .calculadora td {
